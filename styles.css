@@ -72,7 +72,7 @@ img{ max-width:100%; display:block; }
   margin: 0 auto 3.2rem;
   text-align: center;
 }
-.section-head h2{ font-size: clamp(2rem, 4vw, 2.7rem); }
+.section-head h2{ font-size: clamp(2rem, 4vw, 4rem); }
 .section-head p{ font-size: 1.05rem; }
 .section-head.light h2{ color: var(--cream); }
 .section-head.light p{ color: rgba(247,244,239,.75); }
@@ -166,7 +166,7 @@ img{ max-width:100%; display:block; }
   display: flex;
   gap: 2.1rem;
   margin: 0; padding: 0;
-  font-size: .92rem;
+  font-size: 18px;
 }
 .nav-links a{
   position: relative;
@@ -188,7 +188,7 @@ img{ max-width:100%; display:block; }
   display:flex; align-items:center; justify-content:center;
   color: var(--navy);
 }
-.cart-btn svg{ width: 22px; height: 22px; }
+.cart-btn svg{ width: 52px; height: 22px; }
 .cart-count{
   position:absolute; top:0; right:0;
   background: var(--pink); color: var(--cream);
@@ -225,6 +225,7 @@ img{ max-width:100%; display:block; }
   background: url("images/patron-macrame.jpg") center 30% / cover no-repeat;
   z-index:-2;
   transform: scale(1.06);
+  filter: blur(3px) brightness(0.85); /* Oscurece un 15% para resaltar letras claras */
 }
 .hero-veil{
   position:absolute; inset:0;
@@ -238,7 +239,7 @@ img{ max-width:100%; display:block; }
   color: var(--cream);
 }
 .hero-eyebrow{
-  font-size: .85rem;
+  font-size: 17px;
   letter-spacing: .16em;
   color: var(--gold);
   margin-bottom: 1.1rem;
@@ -261,7 +262,7 @@ img{ max-width:100%; display:block; }
 .hero-title .line-accent{ color: var(--pink); font-style: italic; }
 .hero-text{
   max-width: 480px;
-  font-size: 1.08rem;
+  font-size: 20px;
   color: rgba(247,244,239,.85);
   opacity: 0;
   animation: rise .9s var(--ease) .6s forwards;
