@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luz & Arte · Boutique Macramé</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+<!-- ============ ENCABEZADO ============ -->
+<header class="site-header" id="inicio">
+  <nav class="nav">
+    <a href="#inicio" class="brand">
+    <img src="images/Luz&Arte_claro.png" alt="Luz & Arte Boutique Macramé" class="brand-logo" height="50">
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#catalogo">Catálogo</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="cart-btn" id="cartBtn" aria-label="Abrir carrito">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 4h2l1.6 10.6A2 2 0 0 0 8.6 16h8.8a2 2 0 0 0 2-1.7L21 7H6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="9" cy="20" r="1.3" fill="currentColor"/>
+          <circle cx="17" cy="20" r="1.3" fill="currentColor"/>
+        </svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-veil"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Tejido a mano, hilo a hilo</p>
+    <h1 class="hero-title">
+      <span class="line" style="--d:0">Brazaletes que</span>
+      <span class="line" style="--d:1">cuentan</span>
+      <span class="line line-accent" style="--d:2">tu historia</span>
+    </h1>
+    <p class="hero-text">Cada nudo de Luz &amp; Arte es una pieza única, tejida a mano y pensada para acompañarte. Elige tu modelo, tu color, y déjanos crear algo que sea solo tuyo.</p>
+    <div class="hero-actions">
+      <a href="#catalogo" class="btn btn-primary">Ver catálogo</a>
+      <a href="#servicios" class="btn btn-ghost">Nuestros servicios</a>
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <span></span>
+    <p>Desliza</p>
+  </div>
+</section>
+
+<!-- ============ CATÁLOGO ============ -->
+<section class="catalog" id="catalogo">
+  <div class="section-head">
+    <h2>Nuestro catálogo</h2>
+    <p>Elige un diseño, escoge el color que más te represente y añádelo a tu pedido. Cada modelo se teje bajo encargo.</p>
+  </div>
+
+  <div class="catalog-grid" id="catalogGrid">
+    <!-- Las tarjetas de producto se generan dinámicamente desde script.js -->
+  </div>
+</section>
+
+<!-- ============ SERVICIOS ============ -->
+<section class="services" id="servicios">
+  <div class="services-pattern" aria-hidden="true"></div>
+  <div class="section-head light">
+    <h2>Lo que hacemos por ti</h2>
+    <p>Más que brazaletes, ofrecemos un proceso completo alrededor de cada pieza.</p>
+  </div>
+
+  <div class="services-list">
+    <article class="service">
+      <label style="font-size: 30px;">🌟</label>
+      <h3>Diseños únicos</h3>
+      <p>Cada modelo nace en nuestro taller y se teje en pequeños lotes. No buscamos la producción en serie, sino piezas con carácter propio.</p>
+    </article>
+
+    <article class="service">
+      <label style="font-size: 30px;">✏️</label>
+      <h3>Personalización</h3>
+      <p>Elige la combinación de colores, el tamaño y los detalles de tu brazalete. La hacemos a tu medida, para que sea completamente tuya.</p>
+    </article>
+
+    <article class="service">
+        <label style="font-size: 30px;">🧵</label>
+      <h3>Clínica de reparación</h3>
+      <p>¿Se soltó un nudo o se rompió un hilo? Si tu brazalete es de Luz &amp; Arte, la reparamos <strong>sin costo</strong>. Cuidamos lo que tejemos.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ SOBRE MÍ / DETRÁS DEL NEGOCIO ============ -->
+<section class="about" id="nosotros">
+  <div class="about-inner">
+    <div class="about-photo-wrap">
+      <div class="about-photo placeholder" id="aboutPhoto">
+        <img src="images/fundadora.jpg" alt="">
+      </div>
+      <span class="about-photo-frame" aria-hidden="true"></span>
+    </div>
+
+    <div class="about-text">
+      <p class="about-eyebrow">Quién teje cada nudo</p>
+      <h2>Hola, soy <span class="about-name">Luchy Arroyo</span></h2>
+      <p class="about-lead">
+        Fundadora de Luz &amp; Arte Boutique Macramé. Esto nace del deseo de transformar hilos y nudos en recuerdos que perduren. Lo que empezó como una pasión por la técnica del macramé, se convirtió en este espacio creativo donde cada bazalete se diseña de forma artesanal. Me inspira ver cómo un accesorio hecho a mano puede reflejar personalidades, historias y lazos especiales entre las personas, haciendo que cada pieza sea verdaderamente única.
+      </p>
+      <p>
+        Cada nudo que tejo lleva dedicación, tiempo y mucho cariño. Al llevar una de mis brazaletes, no solo usas un accesorio, sino un detalle hecho a mano listo para acompañarte y entrelazar tus mejores momentos.
+      </p>
+      <p class="about-signature">— Lucía Carolina Arroyo, Luz &amp; Arte</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACTO / FOOTER ============ -->
+<footer class="site-footer" id="contacto">
+  <div class="footer-inner">
+    <div class="footer-brand">
+        <img src="images/Luz&Arte_oscuro.png" alt="Luz & Arte" class="footer-logo">
+        <p>Luz &amp; Arte Boutique Macramé — piezas tejidas a mano, con tiempo y cariño.</p>
+    </div>
+    <div class="footer-contact">
+      <p>¿Tienes dudas sobre un modelo o quieres algo a tu medida?</p>
+      <a href="https://ig.me/m/luzyarte_boutique.slj" target="_blank" rel="noopener" class="ig-link">
+        Escríbenos por Instagram
+      </a>
+    </div>
+  </div>
+  <p class="footer-note">© <span id="year"></span> Luz &amp; Arte Boutique Macramé. Hecho con hilo, nudos y paciencia.</p>
+</footer>
+
+<!-- Botón flotante de Instagram -->
+<a href="https://www.instagram.com/luzyarte_boutique.slj/" target="_blank" rel="noopener" class="ig-float" aria-label="Síguenos en Instagram">
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.5"/>
+    <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.5"/>
+    <circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/>
+  </svg>
+  <span class="ig-ping"></span>
+</a>
+
+<!-- ============ CARRITO ============ -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-panel" id="cartPanel" aria-label="Carrito de compras">
+  <div class="cart-header">
+    <h2>Tu pedido</h2>
+    <button class="cart-close" id="cartClose" aria-label="Cerrar carrito">&times;</button>
+  </div>
+
+  <div class="cart-body" id="cartBody">
+    <div class="cart-empty" id="cartEmpty">
+      <p>Aún no has añadido ningún brazalete.</p>
+      <a href="#catalogo" class="btn btn-primary btn-sm" id="cartEmptyBtn">Ir al catálogo</a>
+    </div>
+
+    <ul class="cart-items" id="cartItems"></ul>
+
+    <div class="cart-comment">
+      <label for="orderComment">¿Algún cambio o sugerencia para tu pedido?</label>
+      <textarea id="orderComment" rows="3" placeholder="Ej: quisiera el dije en dorado, o el tamaño un poco más grande…"></textarea>
+    </div>
+
+    <div class="cart-customer">
+  <h3>Tus datos</h3>
+  <div class="field">
+    <label for="custName">Nombre completo *</label>
+    <input type="text" id="custName" placeholder="¿Cómo te llamas?">
+  </div>
+  <div class="field">
+    <label for="custPhone">Número de contacto (WhatsApp) *</label>
+    <input type="tel" id="custPhone" placeholder="Ej: 3001234567" maxlength="10" pattern="[0-9]{10}" >
+  </div>
+  <div class="field">
+    <label for="custCity">Ciudad / Barrio de pedido</label>
+    <input type="text" id="custCity" placeholder="Sincelejo, Corozal...">
+  </div>
+</div>
+  </div>
+
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Total</span>
+      <strong id="cartTotal">$0</strong>
+    </div>
+    <button class="btn btn-primary btn-block" id="submitOrder">Enviar pedido</button>
+  </div>
+</aside>
+
+<!-- Plantilla de tarjeta de producto (usada por script.js) -->
+<template id="productCardTemplate">
+  <article class="product-card">
+    <div class="product-image-wrap">
+      <div class="product-image placeholder">
+        <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="28" rx="2" stroke="currentColor" stroke-width="1.2"/><circle cx="16" cy="19" r="3" stroke="currentColor" stroke-width="1.2"/><path d="M6 32l10-9 8 7 6-5 12 10" stroke="currentColor" stroke-width="1.2"/></svg>
+        <span>Foto real próximamente</span>
+      </div>
+      <span class="product-tag"></span>
+    </div>
+    <div class="product-info">
+      <h3 class="product-name"></h3>
+      <p class="product-desc"></p>
+
+      <div class="product-colors">
+        <span class="product-colors-label">Color:</span>
+        <div class="swatches"></div>
+      </div>
+
+      <div class="product-bottom">
+        <span class="product-price"></span>
+        <div class="qty-control">
+          <button type="button" class="qty-btn qty-minus" aria-label="Restar">−</button>
+          <span class="qty-value">1</span>
+          <button type="button" class="qty-btn qty-plus" aria-label="Sumar">+</button>
+        </div>
+      </div>
+      <button type="button" class="btn btn-add">Añadir al pedido</button>
+    </div>
+  </article>
+</template>
+
+<script src="script.js"></script>
+</body>
+</html>
