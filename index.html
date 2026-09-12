@@ -125,7 +125,7 @@
         Fundadora de Luz &amp; Arte Boutique Macramé. Esto nace del deseo de transformar hilos y nudos en recuerdos que perduren. Lo que empezó como una pasión por la técnica del macramé, se convirtió en este espacio creativo donde cada bazalete se diseña de forma artesanal. Me inspira ver cómo un accesorio hecho a mano puede reflejar personalidades, historias y lazos especiales entre las personas, haciendo que cada pieza sea verdaderamente única.
       </p>
       <p>
-        Cada nudo que tejo lleva dedicación, tiempo y mucho cariño. Al llevar una de mis brazaletes, no solo usas un accesorio, sino un detalle hecho a mano listo para acompañarte y entrelazar tus mejores momentos.
+        Cada nudo que tejo lleva dedicación, tiempo y mucho cariño. Al llevar uno de mis brazaletes, no solo usas un accesorio, sino un detalle hecho a mano listo para acompañarte y entrelazar tus mejores momentos.
       </p>
       <p class="about-signature">— Lucía Carolina Arroyo, Luz &amp; Arte</p>
     </div>
@@ -188,7 +188,7 @@
   </div>
   <div class="field">
     <label for="custPhone">Número de contacto (WhatsApp) *</label>
-    <input type="number" id="custPhone" placeholder="Ej: 3001234567" maxlength="10" pattern="[0-9]" >
+    <input type="tel" id="custPhone" placeholder="Ej: 3001234567" maxlength="10" pattern="[0-9]{10} oninput="this.value = this.value.replace(/[^0-9]/g, '')" onkeydown="if(['e', 'E', '+', '-', '.','/','*'].includes(event.key)) event.preventDefault();">
   </div>
   <div class="field">
     <label for="custCity">Ciudad / Barrio de pedido</label>
